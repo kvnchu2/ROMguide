@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="rom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<h1>Calculator for percent of full range of motion (ROM) for major joints</h1>
+	<h2>Based on normative ROM values</h2>
+	<h4>Joint:</h4>
+		<select id= "slct1" name="joint" onchange="populate('slct1','slct2')">
+			<option value="pick">-pick an option-</option>
+			<option value="cervical">cervical</option>
+			<option value="lumbar-thoracic">lumbar-thoracic</option>
+			<option value="hip">hip</option>
+			<option value="knee">knee</option>
+			<option value="ankle">ankle</option>
+			<option value="shoulder">shoulder</option>
+			<option value="elbow">elbow</option>
+			<option value="wrist">wrist</option>
+		</select>
+	<h4>Movement:</h4>
+		<select id= "slct2" name="movement"></select>
+	<h4>Range of Motion(degrees):</h4>
+		<input type="text" id="ROM"><br>
+		<div class="buttons">
+			<button id="submit" onclick="submit()">Submit</button>
+		</div>
+		<br><p>The max ROM is: <b><span id="maxROM"></span> </b>degrees</p></br>
+		<p>You are at <b><span id="percent"></span>%</b> of full range</p>
+</div>
+<footer><script src="option.js"></script></footer>
+</body>
+</html>
